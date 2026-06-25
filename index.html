@@ -19,6 +19,16 @@
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     />
     <title>FoodShare — Feed People, Not Landfills</title>
+    <script>
+      // Restore path from 404.html redirect (GitHub Pages SPA workaround)
+      (function () {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
